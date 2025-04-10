@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-LINKS_FILE = 'links.json'
+LINKS_FILE = os.path.join('/tmp', 'links.json')
 
 # Ensure file exists
 if not os.path.exists(LINKS_FILE):
